@@ -5,7 +5,7 @@ html {
 body {
   height: 100vh;
   position: relative;
-  background: url(../assets/car-repairman-wearing-white.jpg) no-repeat center center/cover;
+  background: url(https://lh3.googleusercontent.com/pw/AJFCJaVz0yC3PZPFhqoXimgjOofPpzhK8-7uu-BgNOU4oJnZZ3s5vt0eHTvTUYul8cHM22TrOq0Waks4qQ187_82bK2EBao0QcbdrZU2d5FbSaaRAdLIFT58pWcv4rK1Bus5roTSftY-dF6Sp9f_S6DcCJVks7-vMe2UFXd0bENFggacy2YwgUp5cZkzzjy95HIeGOud86rGQKoXjGeh6X7vYzAG94-VCuP3D7gXffWBcS4WqsFhFbbQpmJawEBA9E8IgENWGYV3XtBSKIVININmFBYxOyZNUH05TQOyB1uQvY_KXLqkSP96i8a9yDF83QAllOLCq5bUFGddP4y9G8JVKlEF6q60A1QMat6SVWbujsZtFHQdWmV866ZnHRZyW7DfutsTmHAXkH_vQQRhNx3YzxCM0Zz_u78s6XBebCrii5lQLLKkQFcu_O9aUqW0JzBEhfhouEcl4Hn7BcEnuke7prMUbwqFlsd0jC2ISoBh1GyLIGVXK1qVZvxSvF9BMDoFrloXmVwKNMb6oRK5bdNbzC0fP9c-yOrXGV-M9HnkG3JERtbTfCx9jcfo174O6W_khzryLcdTPBfkbUG7dLqxzXjGJEUq3n6-h8zmAWbEbBw-3ddUNF98P39aPc6rKmPPZp5ifV9VrUyhnxIaSkRmpXiVF6H-0jEylCnHoEW4nFLQtB8IRFEtTaFe2Dqv0jDCOjdr61abApEw8qFBtT25cBFmpUyBU191BpjT6PakSEBg5o-alVqylNTdEyHjzQv0pDO1GWVJlzHLVGUV4fYr7tdFAQcVjYKEeUMBESCyR_ovjNz8xMi2KcrzhjcFLqrW6rpO3IzBrkwQwbPV7hkxNWL0L6jMSiYphQwW7v0ZQ4KxoPzZqESDiczD2qd4xacxoMGkCChkrzv5yblxEWGMKeR4S-rfgmgjP58kKyYmv84_Vf8tTjo1egG9xrYDKVw=w633-h422-no?authuser=0) no-repeat center center/cover;
 }
 body .black-bg {
   background: black;
@@ -15,37 +15,40 @@ body .black-bg {
   opacity: 0.4;
 }
 body .logo {
-  width: 10rem;
+  width: 15rem;
 }
 body .logo * {
   width: 100%;
 }
-body .btns-container .btn {
+
+.btns-container .btn {
   font-size: 1rem;
   outline: none;
   cursor: pointer;
   text-transform: uppercase;
-  padding: 1em 2.5em;
+  padding: calc(1em + 2px) calc(2.5em + 2px);
   border-radius: 0.4rem;
-  transition: 0.6s;
+  transition: 0.3s;
   border: none;
   font-weight: 700;
-  -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+  -webkit-box-reflect: below 4px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
 }
-body .btns-container .btn,
-body .btns-container .sign-up {
-  color: rgb(234, 234, 234);
-  background-color: rgb(14, 14, 26);
+.btns-container .cta {
+  color: #f1faee;
+  background-color: #1d3557;
   box-shadow: 0px 0px 60px #1f4c65;
 }
-body .btns-container .sign-up:active {
+.btns-container .cta:active {
   scale: 0.92;
 }
-body .btns-container .sign-up:hover {
-  background: rgb(2, 29, 78);
-  background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+.btns-container .cta:hover {
+  background: #1d3557;
+  background: linear-gradient(270deg, rgba(2, 29, 78, 0.6392156863) 0%, #a8dadc 60%);
   color: rgb(4, 4, 38);
 }
-body .btns-container .login {
+.btns-container .login {
+  color: #f1faee;
+  padding: 1em 2.5em;
   background: transparent;
+  border: 2px solid #1d3557;
 }/*# sourceMappingURL=main.min.css.map */
