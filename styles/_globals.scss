@@ -1,10 +1,14 @@
 // fonts
-$pri-font: 'Ysabeau Infant', sans-serif;
+$pri-font: "Ysabeau Infant", sans-serif;
 
 // colors
+$dark-blue: #1d3557;
+$blue: #457b9d;
+$light-blue: #a8dadc;
+$white-ish: #f1faee;
+$red-ish: #e63946;
 
-
-@mixin w-h($size){
-    height: $size;
-    width: $size;
+@mixin w-h($size) {
+  height: $size;
+  width: $size;
 }
