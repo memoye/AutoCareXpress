@@ -5,7 +5,7 @@ $pri-font: "Ysabeau Infant", sans-serif;
 // logos
 $logo-symbol: url("../assets/logoSymbol.png");
 $logo-text-white: url("../assets/logo-text-white.png");
-$logo-text-black: url("../assets/logo-text-dark.png")
+$logo-text-black: url("../assets/logo-text-dark.png");
 
 // colors
 $dark-blue: #1d3557;
@@ -20,4 +20,11 @@ $bg-image: url("https://lh3.googleusercontent.com/pw/AJFCJaVz0yC3PZPFhqoXimgjOof
 @mixin w-h($size) {
   height: $size;
   width: $size;
+}
+
+@mixin pos-center{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
