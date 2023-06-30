@@ -1,0 +1,10 @@
+// fonts
+$pri-font: 'Ysabeau Infant', sans-serif;
+
+// colors
+
+
+@mixin w-h($size){
+    height: $size;
+    width: $size;
+}
