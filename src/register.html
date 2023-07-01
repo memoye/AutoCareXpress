@@ -17,7 +17,23 @@
 </head>
 
 <body>
+    <header>
+        <a href="./index.html">
+            <div class="logo">
+                <img class="symbol" src="../assets/logoSymbol.png" alt="AutoCareXpress">
+                <img class="text" src="../assets/logo-text-white.png" alt="">
+            </div>
+        </a>
+
+        <nav class="nav">
+            <ul class="nav-ul">
+                <li><a href="#">About us</a></li>
+                <!-- <li><a href="#">Sign up</a></li>  -->
+            </ul>
+        </nav>
+    </header>
     <main>
+        <div class="back"><p class="back-btn" onclick="history.back()"> ←Go back</p> </div>
         <form action="" class="form_main">
             <p class="heading">Register</p>
             <div class="inputContainer">
@@ -32,6 +48,7 @@
                 </svg>
                 <input type="text" class="inputField" id="username" placeholder="Username">
             </div>
+
 
             <div class="inputContainer">
                 <svg class="inputIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#1d3557"
@@ -66,7 +83,7 @@
 
             <div class="links">
                 <button id="button">Submit</button>
-                <p>Already have an account? <a class="loginLink" href="./login.html">Login</a></p>
+                <p>Already have an account? <a class="loginLink cta" href="./login.html">Login</a></p>
             </div>
 
             <!-- <a class="forgotLink" href="#">Forgot your password?</a> -->

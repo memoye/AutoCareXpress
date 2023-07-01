@@ -102,10 +102,23 @@
 .links {
   text-align: center;
   width: 100%;
-margin-top: 1rem;
+margin-top: 0.5rem;
+z-index: 5;
 
   * {
     margin: auto;
+    margin-top: 0.5rem;
+  }
+
+  .loginLink {
+    text-decoration: none;
+    color: $dark-blue;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    &:hover {
+        color: $blue;
+    }
   }
 }
 

@@ -105,10 +105,21 @@
 .links {
   text-align: center;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  z-index: 5;
 }
 .links * {
   margin: auto;
+  margin-top: 0.5rem;
+}
+.links .loginLink {
+  text-decoration: none;
+  color: #1d3557;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.links .loginLink:hover {
+  color: #457b9d;
 }
 
 .forgotLink {
@@ -136,17 +147,18 @@ body .black-bg {
   width: 100%;
   position: absolute;
   opacity: 0.4;
+  z-index: -1;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #a8dadc;
-  padding: 0.5em;
+  background: #457b9d;
+  padding: 0.5em 1em;
 }
 header * {
-  z-index: 3;
+  z-index: 10;
 }
 header .logo {
   display: flex;
@@ -154,7 +166,6 @@ header .logo {
   align-items: center;
   width: 12rem;
   padding: 1em 0;
-  border: 1px solid red;
 }
 header .logo img {
   width: 80%;
@@ -193,17 +204,19 @@ main {
 .hero {
   color: #f1faee;
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
 }
 .hero-title {
-  font-size: 15vmin;
+  font-size: 14vmin;
   margin: 0;
-  max-width: 70%;
+  width: 100%;
+  max-width: 40rem;
   line-height: 1em;
 }
 .hero-desc {
   font-size: 1.4rem;
-  max-width: 70%;
+  width: 100%;
+  max-width: 40rem;
 }
 .hero a {
   text-decoration: none;
@@ -235,4 +248,23 @@ main {
 .btns-container .cta:hover {
   background: #1d3557;
   background: linear-gradient(270deg, rgba(2, 29, 78, 0.6392156863) 0%, #a8dadc 60%);
+}
+
+.back {
+  color: #f1faee;
+  font-weight: 600;
+  font-size: 1.5rem;
+  display: grid;
+  place-items: center;
+  justify-content: start;
+  max-width: 40rem;
+  margin: auto;
+  cursor: pointer;
+}
+.back-btn {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.back-btn:hover {
+  color: #e63946;
 }/*# sourceMappingURL=main.min.css.map */
