@@ -28,3 +28,11 @@ $bg-image: url("https://lh3.googleusercontent.com/pw/AJFCJaVz0yC3PZPFhqoXimgjOof
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin glow($col){
+  text-shadow:
+  0 0 5px $col,
+  0 0 20px $col,
+  0 0 60px $col;
+}
+

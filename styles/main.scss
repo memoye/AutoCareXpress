@@ -1,11 +1,12 @@
 @import "globals";
+@import "forms";
 
 html {
   font-family: $pri-font;
 }
 
 body {
-  height: 100vh;
+  height: 100dvh;
   position: relative;
   background: $bg-image no-repeat center center / cover;
 
@@ -15,27 +16,54 @@ body {
     position: absolute;
     opacity: 0.4;
   }
-
-  .logo {
-    width: 4rem;
-    img {
-      width: 100%;
-    }
-  }
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  background: $light-blue;
+  padding: 0.5em;
+
+  * {
+    z-index: 3;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12rem;
+    padding: 1em 0;
+    border: 1px solid red;
+
+    img {
+      width: 80%;
+    }
+
+    .symbol {
+      width: 20%;
+    }
+  }
 
   .nav-ul {
     display: flex;
-    border: 1px solid red;
+    justify-content: space-between;
+    background: transparent;
     padding: 0;
     list-style-type: none;
+    // width: 9rem;
 
     a {
       text-decoration: none;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $dark-blue;
+
+      &:hover {
+        cursor: pointer;
+        @include glow($light-blue);
+      }
     }
   }
 }
@@ -44,29 +72,40 @@ main {
   @include pos-center;
   width: 90vw;
   padding: 1em;
-  // text-align: center;
-  // border: 1px solid red;
+
 }
 
 .hero {
   color: $white-ish;
+  display: grid;
+  gap: 1rem;
 
   &-title {
     font-size: 15vmin;
     margin: 0;
-    // border: 1px solid red;
+    max-width: 70%;
 
     line-height: 1em;
   }
 
   &-desc {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    max-width: 70%;
+
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: rgb(4, 4, 38);
+    }
   }
 }
 
 .btns-container {
   .btn {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     outline: none;
     cursor: pointer;
     text-transform: uppercase;
@@ -77,6 +116,7 @@ main {
     font-weight: 700;
     -webkit-box-reflect: below 4px
       linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+    // margin-top: 1.5rem;
   }
 
   .cta {
@@ -92,13 +132,6 @@ main {
   .cta:hover {
     background: $dark-blue;
     background: linear-gradient(270deg, #021d4ea3 0%, $light-blue 60%);
-    color: rgb(4, 4, 38);
-  }
-
-  .login {
-    color: $white-ish;
-    padding: 1em 2.5em;
-    background: transparent;
-    border: 2px solid $dark-blue;
+  
   }
 }

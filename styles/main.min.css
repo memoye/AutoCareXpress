@@ -1,9 +1,132 @@
+.form_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1faee;
+  padding: 30px 30px 30px 30px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.062);
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  max-width: 35rem;
+  margin: auto;
+}
+
+.form_main::before {
+  position: absolute;
+  content: "";
+  height: 80vmin;
+  width: 80vmin;
+  background: url("../assets/logoSymbol.png") no-repeat center center/contain;
+  opacity: 0.2;
+  right: -7rem;
+  bottom: 30px;
+  z-index: 1;
+  border-radius: 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.082);
+}
+
+.heading {
+  text-align: left;
+  font-size: 3rem;
+  color: #1d3557;
+  font-weight: 700;
+  width: 100%;
+  margin: 0.5rem 0 2rem 0;
+  z-index: 2;
+}
+
+.inputContainer {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 3px;
+}
+
+.inputField {
+  width: 100%;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(173, 173, 173);
+  margin: 10px 0;
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+
+.inputField:focus {
+  outline: none;
+  border-bottom: 2px solid #457b9d;
+}
+
+.inputField::-moz-placeholder {
+  color: rgb(80, 80, 80);
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.inputField::placeholder {
+  color: rgb(80, 80, 80);
+  font-size: 1em;
+  font-weight: 500;
+}
+
+#button {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  border: none;
+  background-color: #1d3557;
+  height: 30px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+#button:hover {
+  background-color: #a8dadc;
+  color: #1d3557;
+}
+
+.links {
+  text-align: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+.links * {
+  margin: auto;
+}
+
+.forgotLink {
+  z-index: 2;
+  font-size: 0.7em;
+  font-weight: 500;
+  color: #e63946;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
 html {
   font-family: "Ysabeau Infant", sans-serif;
 }
 
 body {
-  height: 100vh;
+  height: 100dvh;
   position: relative;
   background: url("https://lh3.googleusercontent.com/pw/AJFCJaVz0yC3PZPFhqoXimgjOofPpzhK8-7uu-BgNOU4oJnZZ3s5vt0eHTvTUYul8cHM22TrOq0Waks4qQ187_82bK2EBao0QcbdrZU2d5FbSaaRAdLIFT58pWcv4rK1Bus5roTSftY-dF6Sp9f_S6DcCJVks7-vMe2UFXd0bENFggacy2YwgUp5cZkzzjy95HIeGOud86rGQKoXjGeh6X7vYzAG94-VCuP3D7gXffWBcS4WqsFhFbbQpmJawEBA9E8IgENWGYV3XtBSKIVININmFBYxOyZNUH05TQOyB1uQvY_KXLqkSP96i8a9yDF83QAllOLCq5bUFGddP4y9G8JVKlEF6q60A1QMat6SVWbujsZtFHQdWmV866ZnHRZyW7DfutsTmHAXkH_vQQRhNx3YzxCM0Zz_u78s6XBebCrii5lQLLKkQFcu_O9aUqW0JzBEhfhouEcl4Hn7BcEnuke7prMUbwqFlsd0jC2ISoBh1GyLIGVXK1qVZvxSvF9BMDoFrloXmVwKNMb6oRK5bdNbzC0fP9c-yOrXGV-M9HnkG3JERtbTfCx9jcfo174O6W_khzryLcdTPBfkbUG7dLqxzXjGJEUq3n6-h8zmAWbEbBw-3ddUNF98P39aPc6rKmPPZp5ifV9VrUyhnxIaSkRmpXiVF6H-0jEylCnHoEW4nFLQtB8IRFEtTaFe2Dqv0jDCOjdr61abApEw8qFBtT25cBFmpUyBU191BpjT6PakSEBg5o-alVqylNTdEyHjzQv0pDO1GWVJlzHLVGUV4fYr7tdFAQcVjYKEeUMBESCyR_ovjNz8xMi2KcrzhjcFLqrW6rpO3IzBrkwQwbPV7hkxNWL0L6jMSiYphQwW7v0ZQ4KxoPzZqESDiczD2qd4xacxoMGkCChkrzv5yblxEWGMKeR4S-rfgmgjP58kKyYmv84_Vf8tTjo1egG9xrYDKVw=w633-h422-no?authuser=0") no-repeat center center/cover;
 }
@@ -14,25 +137,48 @@ body .black-bg {
   position: absolute;
   opacity: 0.4;
 }
-body .logo {
-  width: 4rem;
-}
-body .logo img {
-  width: 100%;
-}
 
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  background: #a8dadc;
+  padding: 0.5em;
+}
+header * {
+  z-index: 3;
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12rem;
+  padding: 1em 0;
+  border: 1px solid red;
+}
+header .logo img {
+  width: 80%;
+}
+header .logo .symbol {
+  width: 20%;
 }
 header .nav-ul {
   display: flex;
-  border: 1px solid red;
+  justify-content: space-between;
+  background: transparent;
   padding: 0;
   list-style-type: none;
 }
 header .nav-ul a {
   text-decoration: none;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #1d3557;
+}
+header .nav-ul a:hover {
+  cursor: pointer;
+  text-shadow: 0 0 5px #a8dadc, 0 0 20px #a8dadc, 0 0 60px #a8dadc;
 }
 
 main {
@@ -46,18 +192,28 @@ main {
 
 .hero {
   color: #f1faee;
+  display: grid;
+  gap: 1rem;
 }
 .hero-title {
   font-size: 15vmin;
   margin: 0;
+  max-width: 70%;
   line-height: 1em;
 }
 .hero-desc {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  max-width: 70%;
+}
+.hero a {
+  text-decoration: none;
+}
+.hero a:hover {
+  color: rgb(4, 4, 38);
 }
 
 .btns-container .btn {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   outline: none;
   cursor: pointer;
   text-transform: uppercase;
@@ -79,11 +235,4 @@ main {
 .btns-container .cta:hover {
   background: #1d3557;
   background: linear-gradient(270deg, rgba(2, 29, 78, 0.6392156863) 0%, #a8dadc 60%);
-  color: rgb(4, 4, 38);
-}
-.btns-container .login {
-  color: #f1faee;
-  padding: 1em 2.5em;
-  background: transparent;
-  border: 2px solid #1d3557;
 }/*# sourceMappingURL=main.min.css.map */
