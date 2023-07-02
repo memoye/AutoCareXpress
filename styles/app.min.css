@@ -1,0 +1,83 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.logo {
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0.2em;
+  margin: 10px;
+}
+.logo img {
+  width: 100%;
+}
+
+.main-layout {
+  min-height: 100dvh;
+  min-height: 100vh;
+}
+.main-layout .app-header {
+  display: flex;
+  position: fixed;
+  height: 15vmin;
+  margin-left: -1.1rem;
+  inset: 1rem;
+  top: 0;
+  bottom: unset;
+  width: 100%;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f1faee;
+}
+.main-layout .app-header .greeting-text {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.main-layout .app-header .profile {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-left: 1.125rem;
+  border-radius: 50%;
+}
+.main-layout .app-header .profile .userImg {
+  width: 100%;
+  border-radius: 50%;
+}
+.main-layout main {
+  margin: 1rem;
+  margin-top: 5rem;
+}
+.main-layout main .feature-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  min-height: 15rem;
+}
+.main-layout main .feature-buttons .feature {
+  background-color: #ccc;
+  font-size: 1rem;
+  padding: 1em;
+  border: none;
+  border-radius: 5px;
+}
+.main-layout main .feature-buttons * + * {
+  margin-top: 1rem;
+}
+.main-layout main .feature-buttons *:nth-child(3) {
+  margin-left: 1rem;
+}
+.main-layout main .feature-buttons .feature:first-child {
+  grid-column: 1/-1;
+}
+.main-layout .bottom-tabs {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+}
+.main-layout .bottom-tabs * {
+  flex: 1;
+  padding: 0.5em;
+  border: none;
+  height: 5rem;
+}/*# sourceMappingURL=app.min.css.map */

@@ -1,0 +1,104 @@
+@import "globals";
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.logo {
+  @include w-h(2.5rem);
+  padding: 0.2em;
+  margin: 10px;
+
+  img {
+    width: 100%;
+  }
+}
+
+
+.main-layout {
+  min-height: 100dvh;
+  min-height: 100vh;
+
+  .app-header {
+    display: flex;
+    position: fixed;
+    height: 15vmin;
+
+    margin-left: -1.1rem;
+    inset: 1rem;
+    top: 0;
+    bottom: unset;
+   
+    width: 100%;
+    align-items: center;
+    gap: 0.5rem;
+    background: $white-ish;
+    
+
+    .greeting-text {
+      flex: 1;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .profile {
+      @include w-h(1.5rem);
+  margin-left: 1.125rem;
+
+      // padding: 0.2em;
+      border-radius: 50%;
+
+      .userImg {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  main {
+    margin: 1rem;
+    margin-top: 5rem;
+
+    .feature-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+      min-height: 15rem;
+
+      .feature {
+        background-color: #ccc;
+        font-size: 1rem;
+        padding: 1em;
+        border: none;
+        border-radius: 5px;
+      }
+
+      * + * {
+        margin-top: 1rem;
+       
+      }
+
+      *:nth-child(3) {
+        margin-left: 1rem;
+      }
+
+      .feature:first-child {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+
+  .bottom-tabs {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+
+    * {
+        flex: 1;
+        padding: 0.5em;
+        border: none;
+        height: 5rem;
+    }
+
+  }
+}
