@@ -19,7 +19,7 @@ body {
 .main-layout .app-header {
   display: flex;
   position: fixed;
-  height: 15vmin;
+  height: 4em;
   margin-left: -1.1rem;
   inset: 1rem;
   top: 0;
@@ -45,20 +45,93 @@ body {
   border-radius: 50%;
 }
 .main-layout main {
-  margin: 1rem;
-  margin-top: 5rem;
+  padding: 1rem;
+  padding-top: 7em;
 }
 .main-layout main .feature-buttons {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
-  min-height: 15rem;
 }
 .main-layout main .feature-buttons .feature {
-  background-color: #ccc;
-  font-size: 1rem;
   padding: 1em;
   border: none;
   border-radius: 5px;
+  transition: 0.2s;
+  transition-timing-function: ease-out;
+  position: relative;
+  overflow: hidden;
+}
+.main-layout main .feature-buttons .feature p {
+  font-size: 5vmin;
+  font-weight: 900;
+  color: #f1faee;
+  justify-self: start;
+  align-self: top;
+  position: relative;
+  top: 0.5em;
+  text-transform: uppercase;
+  font-family: "Ysabeau Infant", sans-serif;
+  margin: 0;
+}
+.main-layout main .feature-buttons .request {
+  display: flex;
+  justify-content: space-between;
+  background: url("../assets/blob.svg") #457b9d no-repeat left -6rem/120%;
+  margin-top: -2rem;
+}
+.main-layout main .feature-buttons .request p {
+  color: #a8dadc;
+}
+.main-layout main .feature-buttons .request img {
+  align-self: center;
+  justify-self: end;
+  width: 40vmin;
+}
+.main-layout main .feature-buttons .request:hover {
+  background: url("../assets/blob.svg") #457b9d no-repeat -8rem 2rem/100%;
+}
+.main-layout main .feature-buttons .request:hover p {
+  color: white;
+}
+.main-layout main .feature-buttons .providers {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  background: url("../assets/Gradient_blob.svg") #a8dadc no-repeat right center/100%;
+}
+.main-layout main .feature-buttons .providers p {
+  text-align: right;
+  color: #1d3557;
+}
+.main-layout main .feature-buttons .providers img {
+  align-self: center;
+  justify-self: end;
+  width: 60%;
+}
+.main-layout main .feature-buttons .providers:hover {
+  background: url("../assets/Gradient_blob.svg") #457b9d no-repeat right center/200%;
+}
+.main-layout main .feature-buttons .providers:hover p {
+  color: #f1faee;
+}
+.main-layout main .feature-buttons .providers:hover p i {
+  color: #f1faee;
+}
+.main-layout main .feature-buttons .status {
+  display: flex;
+  justify-content: space-between;
+  background: url("../assets/blob.svg") #457b9d no-repeat center center/50%;
+}
+.main-layout main .feature-buttons .status img {
+  align-self: center;
+  justify-self: end;
+  width: 75%;
+}
+.main-layout main .feature-buttons .status:hover {
+  background: url("../assets/blob.svg") #1d3557 no-repeat left -2rem/130%;
+}
+.main-layout main .feature-buttons .status:hover p i {
+  color: #f1faee;
 }
 .main-layout main .feature-buttons * + * {
   margin-top: 1rem;

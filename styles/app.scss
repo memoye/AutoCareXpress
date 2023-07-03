@@ -14,7 +14,6 @@ body {
   }
 }
 
-
 .main-layout {
   min-height: 100dvh;
   min-height: 100vh;
@@ -22,18 +21,17 @@ body {
   .app-header {
     display: flex;
     position: fixed;
-    height: 15vmin;
+    height: 4em;
 
     margin-left: -1.1rem;
     inset: 1rem;
     top: 0;
     bottom: unset;
-   
+
     width: 100%;
     align-items: center;
     gap: 0.5rem;
     background: $white-ish;
-    
 
     .greeting-text {
       flex: 1;
@@ -43,7 +41,7 @@ body {
 
     .profile {
       @include w-h(1.5rem);
-  margin-left: 1.125rem;
+      margin-left: 1.125rem;
 
       // padding: 0.2em;
       border-radius: 50%;
@@ -56,25 +54,125 @@ body {
   }
 
   main {
-    margin: 1rem;
-    margin-top: 5rem;
+    padding: 1rem;
+    padding-top: 7em;
 
     .feature-buttons {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
-      min-height: 15rem;
+      //   min-height: 15rem;
 
       .feature {
-        background-color: #ccc;
-        font-size: 1rem;
         padding: 1em;
         border: none;
         border-radius: 5px;
+        transition: 0.2s;
+        transition-timing-function: ease-out;
+        position: relative;
+        overflow: hidden;
+
+        p {
+          font-size: 5vmin;
+          font-weight: 900;
+          color: $white-ish;
+          justify-self: start;
+          align-self: top;
+          position: relative;
+          top: 0.5em;
+          text-transform: uppercase;
+          font-family: $pri-font;
+
+          margin: 0;
+        }
+      }
+
+      .request {
+        display: flex;
+        justify-content: space-between;
+        background: url("../assets/blob.svg") $blue no-repeat left -6rem / 120%;
+        margin-top: -2rem;
+
+        p {
+          //   font-size: 1.5rem;
+          color: $light-blue;
+        }
+
+        img {
+          align-self: center;
+          justify-self: end;
+          width: 40vmin;
+        }
+
+        &:hover {
+          background: url("../assets/blob.svg") $blue no-repeat -8rem 2rem / 100%;
+          p {
+            color: white;
+          }
+        }
+      }
+
+      .providers {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        background: url("../assets/Gradient_blob.svg") $light-blue no-repeat
+          right center / 100%;
+
+        p {
+          text-align: right;
+          color: $dark-blue;
+        }
+
+        img {
+          align-self: center;
+          justify-self: end;
+          width: 60%;
+        }
+
+        &:hover {
+          background: url("../assets/Gradient_blob.svg") $blue no-repeat right
+            center / 200%;
+          p {
+            color: $white-ish;
+            i {
+              color: $white-ish;
+            }
+          }
+        }
+      }
+
+      .status {
+        display: flex;
+        justify-content: space-between;
+        background: url("../assets/blob.svg") $blue no-repeat center center /
+          50%;
+
+        // p {
+
+        // }
+
+        img {
+          align-self: center;
+          justify-self: end;
+          width: 75%;
+        }
+
+        &:hover {
+          background: url("../assets/blob.svg") $dark-blue no-repeat left -2rem /
+            130%;
+
+          p {
+            // color: $dark-blue;
+
+            i {
+              color: $white-ish;
+            }
+          }
+        }
       }
 
       * + * {
         margin-top: 1rem;
-       
       }
 
       *:nth-child(3) {
@@ -85,6 +183,10 @@ body {
         grid-column: 1 / -1;
       }
     }
+
+    // .history {
+
+    // }
   }
 
   .bottom-tabs {
@@ -94,11 +196,10 @@ body {
     display: flex;
 
     * {
-        flex: 1;
-        padding: 0.5em;
-        border: none;
-        height: 5rem;
+      flex: 1;
+      padding: 0.5em;
+      border: none;
+      height: 5rem;
     }
-
   }
 }
